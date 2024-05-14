@@ -1,0 +1,32 @@
+@media (max-width : 991px){
+    .uppernavbar{
+         display: none;   
+     }
+}
+
+.input-feild{
+    width: 50%;
+}
+
+
+@media (max-width : 450px) {
+    .input-feild{
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .input-button{
+        margin-top: 10px
+    }
+
+    .navbar-brand{
+        width: 8rem;
+    }
+}
+
+@media(max-width:767px){
+    .links{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
