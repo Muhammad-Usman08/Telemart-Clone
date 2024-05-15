@@ -1,0 +1,48 @@
+
+
+/* Navbar Custom Styling */
+.input-feild{
+    width: 50%;
+}
+
+.navbar-logo{
+    width: 11rem;
+}
+
+.carousle-main{
+    margin-left: 40px;
+}
+
+@media(max-width: 1279px){
+    .carousle-main{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:767px){
+    .links{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width : 991px){
+    .upperNav{
+         display: none;   
+     }
+}
+
+@media (max-width : 450px) {
+    .input-feild{
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .input-button{
+        margin-top: 10px
+    }
+
+    .navbar-logo{
+        width: 8rem;
+    }
+}

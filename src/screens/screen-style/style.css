@@ -1,0 +1,15 @@
+
+.sec-1-main{
+    display: flex;
+}
+
+@media(max-width:1279px){
+    .sec-1-main{
+        display: block;
+    }
+
+    .jubilee{
+        display: none;
+    }
+}
+
