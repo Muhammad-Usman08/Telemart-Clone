@@ -2,8 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faUser, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import './style.css';
-
+import './style.css'
 
 function MyNavbar() {
   return (
@@ -18,7 +17,7 @@ function MyNavbar() {
       </Container>
      
       {/* main navbar */}
-      <Navbar expand="lg" className="text-left ">
+      <Navbar expand="lg" className="text-left mb-3 ">
         <Container>
           <img className='w-44 flex justify-center navbar-brand' src='https://d1iv6qgcmtzm6l.cloudfront.net/settings/5KaJNAoBfbhAHOn2c24LGvrmA3NrKaCz0hBY4Egv.png' alt="logo" />
 
