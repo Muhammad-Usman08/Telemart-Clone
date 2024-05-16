@@ -46,3 +46,16 @@
         width: 8rem;
     }
 }
+
+
+
+/* Card Styling */
+.mycard{
+    display: flex;
+}
+
+@media(max-width:767px){
+    .mycard{
+        display: block;
+    }
+}

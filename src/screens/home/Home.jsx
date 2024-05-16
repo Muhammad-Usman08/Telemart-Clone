@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import MyNavbar from '../../components/Navbar'
 import axios from 'axios';
 import img1 from './images/img-1.png'
@@ -16,62 +16,78 @@ import img12 from './images/img-12.png'
 import Mycarousel from '../../components/Slider'
 import '../screen-style/style.css'
 import { useParams } from 'react-router-dom';
+import Card from '../../components/Card';
 
 
 
 const Home = () => {
-  
-  // params for dynamic routes
-  const params = useParams();
-  console.log(params);
-  
 
-  useEffect(()=>{
-     axios.get('https://fakestoreapi.com/products')
-    .then((result)=>{
-        console.log(result);
-    }).catch((err)=>{
-      console.log(err);
-    })
+  // params for dynamic routes
+  // const params = useParams();
+  // console.log(params);
+
+  //useState
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    axios.get('https://fakestoreapi.com/products')
+      .then((res) => {
+        console.log(res);
+        setData(res.data)
+      }).catch((err) => {
+        console.log(err);
+      })
   }, [])
 
-  
+
 
   return (
     <>
-    <MyNavbar/>
+      <MyNavbar />
 
 
-    {/* Section 1 */}
-    <div className='container sec-1-main '>
+      {/* Section 1 */}
+      <div className='container sec-1-main '>
 
-      <div className=' pr-24 pl-7  pt-4 pb-10 bg-white'>
-      <p  className='text-[15px] mb-3'>TOP CATEGORIES</p>
-      <ul className='text-[11px]'>
-        <li className='mb-2 mt-2 flex  h-5'> <img src= {img1} alt="" />&nbsp; Mobile</li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img2} alt="" />&nbsp; Men's</li>
-        <li className='mb-2 mt-2 flex h-5'><img src={img3} alt="" />&nbsp; Women's </li>
-        <li className='mb-2 mt-2 flex h-5'><img src={img4} alt="" />&nbsp; Appliance</li>
-        <li className='mb-2 mt-2 flex h-5'><img src={img5} alt="" />&nbsp; TV & Video</li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img6} alt="" />&nbsp; Kids'mart</li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img7} alt="" />&nbsp; Home</li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img8} alt="" />&nbsp; Computer </li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img9} alt="" />&nbsp; Automotive</li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img10} alt="" />&nbsp; Health Care</li>
-        <li className='mb-2 mt-2 flex h-5'> <img src={img11} alt="" />&nbsp; Camera</li>
-        <li className='flex h-5'><img src={img12} alt="" />&nbsp;HomeTheatre</li>
-      </ul>
+        <div className=' pr-24 pl-7  pt-4 pb-10 bg-white'>
+          <p className='text-[15px] mb-3'>TOP CATEGORIES</p>
+          <ul className='text-[11px]'>
+            <li className='mb-2 mt-2 flex  h-5'> <img src={img1} alt="" />&nbsp; Mobile</li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img2} alt="" />&nbsp; Men's</li>
+            <li className='mb-2 mt-2 flex h-5'><img src={img3} alt="" />&nbsp; Women's </li>
+            <li className='mb-2 mt-2 flex h-5'><img src={img4} alt="" />&nbsp; Appliance</li>
+            <li className='mb-2 mt-2 flex h-5'><img src={img5} alt="" />&nbsp; TV & Video</li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img6} alt="" />&nbsp; Kids'mart</li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img7} alt="" />&nbsp; Home</li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img8} alt="" />&nbsp; Computer </li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img9} alt="" />&nbsp; Automotive</li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img10} alt="" />&nbsp; Health Care</li>
+            <li className='mb-2 mt-2 flex h-5'> <img src={img11} alt="" />&nbsp; Camera</li>
+            <li className='flex h-5'><img src={img12} alt="" />&nbsp;HomeTheatre</li>
+          </ul>
+        </div>
+
+        <Mycarousel />
+
+        <div className='ms-10 jubilee'>
+          <img className='mb-3 w-[65%]' src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/Pss29KOUe9q7NUb6ofEZoZsH3nos5RqzkDYreS6A.jpg" alt="" />
+          <img className='w-[65%]' src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/mmXTIEuB8lzTJM1mXhXJVxdN4g3pp8huq9FWMqUO.png" alt="" />
+        </div>
       </div>
 
-      <Mycarousel/>
 
-      <div className='ms-10 jubilee'>
-        <img className='mb-3 w-[65%]' src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/Pss29KOUe9q7NUb6ofEZoZsH3nos5RqzkDYreS6A.jpg" alt="" />
-        <img className='w-[65%]' src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/mmXTIEuB8lzTJM1mXhXJVxdN4g3pp8huq9FWMqUO.png" alt="" />
+     {/* Section 2 */}
+      <div className="container mx-auto mt-10 mb-10">
+        <div className="border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          {data.length > 0 ? data.map((item) => {
+            return <Card key={item.id} title={item.title} price={item.price} description={item.description} image={item.image} id={item.id} category={item.category} />
+          }) : <h1>Loading...</h1>}
+        </div>
       </div>
-    
 
-    </div>
+      
+
     </>
   )
 }
