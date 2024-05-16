@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MyNavbar from '../../components/Navbar'
+import axios from 'axios';
 import img1 from './images/img-1.png'
 import img2 from './images/img-2.png'
 import img3 from './images/img-3.png'
@@ -14,10 +15,28 @@ import img11 from './images/img11.png'
 import img12 from './images/img-12.png'
 import Mycarousel from '../../components/Slider'
 import '../screen-style/style.css'
+import { useParams } from 'react-router-dom';
 
 
 
 const Home = () => {
+  
+  // params for dynamic routes
+  const params = useParams();
+  console.log(params);
+  
+
+  useEffect(()=>{
+     axios.get('https://fakestoreapi.com/products')
+    .then((result)=>{
+        console.log(result);
+    }).catch((err)=>{
+      console.log(err);
+    })
+  }, [])
+
+  
+
   return (
     <>
     <MyNavbar/>
