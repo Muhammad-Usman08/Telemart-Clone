@@ -17,6 +17,7 @@ import Mycarousel from '../../components/Slider'
 import '../screen-style/style.css'
 import { useParams } from 'react-router-dom';
 import Card from '../../components/Card';
+import Popular from '../../components/Popular';
 
 
 
@@ -77,7 +78,7 @@ const Home = () => {
       </div>
 
 
-     {/* Section 2 */}
+      {/* Section 2 */}
       <div className="container mx-auto mt-10 mb-10">
         <div className="border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {data.length > 0 ? data.map((item) => {
@@ -86,7 +87,35 @@ const Home = () => {
         </div>
       </div>
 
-      
+
+
+      {/* Section 3 */}
+      <div className="container">
+        <div className='mb-10 sec-3-main gap-7'>
+          <img className='img-1' src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/Uqr2cd9PMmbcRqAJzSUefxaFj4YMBR75KV8C5AKy.png" alt="" />
+          <img className='img-1' src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/5KkzMTAaDA8M8EHVRI9q8ZUS7wUT0JpgycmBbsas.png" alt="" />
+          <img src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/mfYtow7PLAas2Zksa5KFLBqd3kJgQ8mzZ2Tea1TK.png" alt="" />
+        </div>
+      </div>
+
+
+
+
+      {/* Section 4 */}
+      <Popular />
+
+
+
+      {/* Section 5 */}
+      <div className="container mb-3">
+        <div className='flex gap-3 w-[49%]'>
+          <img src="	https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/mBi8CSHh6eU4sT9PN0SqBLX3UbftWrbp6pIlei2E.jpg" alt="" />
+
+          <img src="https://d1iv6qgcmtzm6l.cloudfront.net/banner_desktops/yWu72FLnUMQxPfJln9cLdusKi85PTrAVuXvMdv4s.png" alt="" />
+        </div>
+      </div>
+
+
 
     </>
   )

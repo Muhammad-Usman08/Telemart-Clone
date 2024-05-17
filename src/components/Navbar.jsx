@@ -8,16 +8,16 @@ function MyNavbar() {
   return (
     // upper navbar
     <div className='bg-[#172237]'>
-     <div className='upperNav'>
-     <Container>
-        <div className='flex justify-between text-[12px] pt-1  text-white'>
-          <p className='mb-2'>Paksitan's Best Online Shopping Desitnation</p>
-          <p className='ms-auto'>Blogs <span className='mx-2'>|</span> Telemart Stores  <span className='mx-2'>|</span> Apply For A Franchise  <span className='mx-2'>|</span> Takaful Islamic Insurance <span className='mx-2'>|</span> Sell On Telemart <span className='mx-2'>|</span> Support  <span className='mx-2'>|</span></p>
-          <p className='ms-5'> بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ </p>
-        </div>
-      </Container>
-     </div>
-     
+      <div className='upperNav'>
+        <Container>
+          <div className='flex justify-between text-[12px] pt-1  text-white'>
+            <p className='mb-2'>Paksitan's Best Online Shopping Desitnation</p>
+            <p className='ms-auto'>Blogs <span className='mx-2'>|</span> Telemart Stores  <span className='mx-2'>|</span> Apply For A Franchise  <span className='mx-2'>|</span> Takaful Islamic Insurance <span className='mx-2'>|</span> Sell On Telemart <span className='mx-2'>|</span> Support  <span className='mx-2'>|</span></p>
+            <p className='ms-5'> بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ </p>
+          </div>
+        </Container>
+      </div>
+
       {/* main navbar */}
       <Navbar expand="lg" className="text-left mb-3 ">
         <Container>
